@@ -1,5 +1,27 @@
 /* Create an array named products which you will use to add all of your product object literals that you create in the next step. */
-
+let products = [{
+  id:"cherry",
+  name: "Cherries",
+  price: "5",
+  desc: "Fresh Bright Red cherries!",
+  img: "images/cherry.jpg",
+},{
+id: "strawberry",
+name:"Strawberries",
+price: "4",
+desc: "Fresh strawberries!",
+img: "imagas/strawberry.jpg", 
+},{
+  id: "orange",
+  name:"Oranges",
+  price: "10",
+  desc: "Fresh Oranges right from the tree!",
+  img: "images/orange.jpg",
+}]
+products ();
+let increment = () =>{};
+let decrement = () => {};
+let update = () => {};
 /* Create 3 or more product objects using object literal notation 
    Each product should include five properties
    - name: name of product (string)
