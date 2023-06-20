@@ -4,24 +4,27 @@ let products = [{
   name: "Cherries",
   price: "5",
   desc: "Fresh Bright Red cherries!",
-  img: "images/cherry.jpg",
+  image: "images/cherry.jpg",
+  quantity: "0",
 },{
 id: "strawberry",
 name:"Strawberries",
 price: "4",
 desc: "Fresh strawberries!",
-img: "imagas/strawberry.jpg", 
+image: "images/strawberry.jpg",
+quantity: "0", 
 },{
   id: "orange",
   name:"Oranges",
   price: "10",
   desc: "Fresh Oranges right from the tree!",
-  img: "images/orange.jpg",
-}]
-products ();
+  image: "images/orange.jpg",
+  quantity: "0",
+}];
 let increment = () =>{};
 let decrement = () => {};
 let update = () => {};
+
 /* Create 3 or more product objects using object literal notation 
    Each product should include five properties
    - name: name of product (string)
@@ -38,13 +41,18 @@ let update = () => {};
 */
 
 /* Declare an empty array named cart to hold the items in the cart */
-
+let cart= [];
 /* Create a function named addProductToCart that takes in the product productId as an argument
   - addProductToCart should get the correct product based on the productId
   - addProductToCart should then increase the product's quantity
   - if the product is not already in the cart, add it to the cart
 */
-
+const addProductToCart = (id) =>{
+  const index = cart.findIndex(item => item.id === id);
+  if (index === -1) {
+    cart.push ()
+  }
+}
 /* Create a function named increaseQuantity that takes in the productId as an argument
   - increaseQuantity should get the correct product based on the productId
   - increaseQuantity should then increase the product's quantity
@@ -66,6 +74,8 @@ let update = () => {};
   - cartTotal should iterate through the cart to get the total of all products
   - cartTotal should return the sum of the products in the cart
 */
+const cartTotal = () => {};
+
 
 /* Create a function called emptyCart that empties the products from the cart */
 
@@ -82,17 +92,3 @@ let update = () => {};
    Run the following command in terminal to run tests
    npm run test
 */
-
-module.exports = {
-   products,
-   cart,
-   addProductToCart,
-   increaseQuantity,
-   decreaseQuantity,
-   removeProductFromCart,
-   cartTotal,
-   pay, 
-   emptyCart,
-   /* Uncomment the following line if completing the currency converter bonus */
-   // currency
-}
