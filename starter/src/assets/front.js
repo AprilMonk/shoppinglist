@@ -111,7 +111,7 @@ document.querySelector('.pay').addEventListener('click', (e) => {
 
     // Set cashReturn to return value of pay()
     let cashReturn = pay(amount);
-
+    cashReturn = parseFloat(cashReturn);
     let paymentSummary = document.querySelector('.pay-summary');
     let div = document.createElement('div');
 
