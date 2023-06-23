@@ -85,7 +85,7 @@ function removeProductFromCart(id) {
   - cartTotal should iterate through the cart to get the total of all products
   - cartTotal should return the sum of the products in the cart
 */
-const cartTotal = () => {
+function cartTotal() {
   let total = 0;
 
   for (let i = 0; i < cart.length; i++) {
@@ -104,10 +104,19 @@ function emptyCart() {
   - pay will return a negative number if there is a remaining balance
   - pay will return a positive number if money should be returned to customer
 */
+let remainingBalance = 0;
 function pay(amount) {
-  return parseFloat(amount - cartTotal());
+  let balance = 0;
+  if (remainingBalance < 0) {
+    balance = remainingBalance + amount;
+  } else {
+    balance = amount - cartTotal();
+  }
+  if (balance < 0) {
+    remainingBalance = balance;
+  }
+  return balance;
 }
-
 if (typeof exports !== undefined) {
   module.exports = {
     products,
